@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>CTC to In-Hand Salary Calculator India (2025) – Monthly Take Home</title>
+
+<meta name="description" content="Free CTC to In-Hand Salary Calculator India. Calculate monthly take home salary from CTC with PF and tax estimation. Accurate, fast & mobile-friendly.">
+<meta name="keywords" content="ctc to in hand salary calculator india, salary breakup calculator, ctc 5 lpa in hand salary, monthly take home salary, salary calculator india">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="canonical" href="https://yashwantsirsate60.github.io/ctc-to-inhand-salary-calculator/" />
+
+<!-- Web Application Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CTC to In-Hand Salary Calculator India",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "description": "Calculate monthly in-hand salary from CTC in India with PF and tax estimation."
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much is in-hand salary for 5 LPA CTC in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 5 LPA CTC, the monthly in-hand salary is approximately ₹38,000–₹40,000 depending on PF and tax deductions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is monthly take home salary from CTC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly take home salary is the amount received after deductions like provident fund (PF) and income tax from the total CTC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is PF deducted from CTC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, employee provident fund (PF) is usually deducted from the CTC and reduces monthly in-hand salary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator use new tax regime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this salary calculator uses the new tax regime for estimation."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --primary:#2563eb;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --success:#16a34a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont;
+  background:var(--bg);
+  color:var(--text);
+}
+header{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  padding:36px 16px;
+  color:#fff;
+  text-align:center;
+}
+header h1{
+  margin:0;
+  font-size:28px;
+}
+header p{
+  margin-top:8px;
+  font-size:15px;
+  opacity:.95;
+}
+.container{
+  max-width:760px;
+  margin:-40px auto 40px;
+  padding:16px;
+}
+.card{
+  background:var(--card);
+  border-radius:14px;
+  box-shadow:0 20px 40px rgba(0,0,0,.08);
+  padding:24px;
+}
+label{
+  font-weight:600;
+}
+input{
+  width:100%;
+  padding:14px;
+  font-size:16px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  margin-top:10px;
+}
+button{
+  width:100%;
+  margin-top:16px;
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  font-size:16px;
+  font-weight:600;
+  background:var(--primary);
+  color:#fff;
+  cursor:pointer;
+}
+button:hover{
+  background:#1e40af;
+}
+.result{
+  margin-top:20px;
+  background:#f1f5f9;
+  border-radius:12px;
+  padding:18px;
+}
+.result p{
+  margin:6px 0;
+  font-size:15px;
+}
+.highlight{
+  background:#ecfdf5;
+  padding:12px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:18px;
+  color:var(--success);
+  margin-top:10px;
+}
+section{
+  margin-top:28px;
+}
+section h2{
+  font-size:20px;
+  margin-bottom:8px;
+}
+section p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
+}
+.note{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:16px;
+}
+footer{
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  margin:20px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>CTC to In-Hand Salary Calculator (India)</h1>
+  <p>Calculate your monthly take home salary from CTC instantly</p>
+</header>
+
+<div class="container">
+  <div class="card">
+
+    <label>Annual CTC (₹)</label>
+    <input type="number" id="ctc" placeholder="Example: 800000">
+
+    <button onclick="calculateSalary()">Calculate In-Hand Salary</button>
+
+    <div class="result" id="result" style="display:none;">
+      <p>Monthly Gross Salary: ₹<span id="gross"></span></p>
+      <p>PF Deduction: ₹<span id="pf"></span></p>
+      <p>Estimated Monthly Tax: ₹<span id="tax"></span></p>
+      <div class="highlight">
+        Monthly In-Hand Salary: ₹<span id="inhand"></span>
+      </div>
+    </div>
+
+    <section>
+      <h2>How to Calculate In-Hand Salary from CTC</h2>
+      <p>In-hand salary is calculated by deducting employee PF and estimated income tax from your total CTC. This calculator follows common salary structure used in India.</p>
+    </section>
+
+    <section>
+      <h2>CTC In-Hand Salary Examples</h2>
+      <p><strong>CTC 5 LPA:</strong> ₹38,000 – ₹40,000 per month</p>
+      <p><strong>CTC 8 LPA:</strong> ₹60,000 – ₹63,000 per month</p>
+      <p><strong>CTC 10 LPA:</strong> ₹75,000 – ₹78,000 per month</p>
+    </section>
+
+    <p class="note">* Estimated values based on new tax regime. Actual salary may vary.</p>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 CTC to In-Hand Salary Calculator • Free Tool
+</footer>
+
+<script>
+function calculateSalary(){
+  let ctc=document.getElementById("ctc").value;
+  if(!ctc||ctc<=0)return;
+
+  let annual=parseFloat(ctc);
+  let monthlyGross=annual/12;
+  let basic=annual*0.4;
+  let pfAnnual=basic*0.12;
+  let pfMonthly=pfAnnual/12;
+  let taxable=annual-50000-pfAnnual;
+
+  let tax=0;
+  if(taxable>300000) tax+=(Math.min(taxable,600000)-300000)*0.05;
+  if(taxable>600000) tax+=(Math.min(taxable,900000)-600000)*0.10;
+  if(taxable>900000) tax+=(Math.min(taxable,1200000)-900000)*0.15;
+  if(taxable>1200000) tax+=(Math.min(taxable,1500000)-1200000)*0.20;
+  if(taxable>1500000) tax+=(taxable-1500000)*0.30;
+
+  document.getElementById("gross").innerText=monthlyGross.toFixed(0);
+  document.getElementById("pf").innerText=pfMonthly.toFixed(0);
+  document.getElementById("tax").innerText=(tax/12).toFixed(0);
+  document.getElementById("inhand").innerText=(monthlyGross-pfMonthly-tax/12).toFixed(0);
+
+  document.getElementById("result").style.display="block";
+}
+</script>
+
+</body>
+</html>
